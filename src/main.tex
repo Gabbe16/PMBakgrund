@@ -1,0 +1,115 @@
+\documentclass[11p]{article}
+% Packages
+\usepackage{amsmath}
+\usepackage{graphicx}
+\usepackage{fancyheadings}
+\usepackage[swedish]{babel}
+\usepackage[
+    backend=biber,
+    style=authoryear-ibid,
+    sorting=ynt
+]{biblatex}
+\usepackage[utf8]{inputenc}
+\usepackage[T1]{fontenc}
+%Källor
+\addbibresource{references.bib}
+\graphicspath{ {./images/} }
+
+% Lite variabler
+\def\email{Gabrielnilsson.hogb@elev.ga.ntig.se}
+\def\foottitle{PM Bakgrund}
+\def\name{Gabriel Nilsson Högberg}
+
+\title{PM Bakgrund \\ \small Gymnasiearbete}
+\author{\name}
+\date{\today}
+
+\begin{document}
+
+% fixar sidfot
+\lfoot{\footnotesize{\name \\ \email}}
+\rfoot{\footnotesize{\today}}
+\lhead{\sc\footnotesize\foottitle}
+\rhead{\nouppercase{\sc\footnotesize\leftmark}}
+\pagestyle{fancy}
+\renewcommand{\headrulewidth}{0.2pt}
+\renewcommand{\footrulewidth}{0.2pt}
+
+% i Sverige har vi normalt inget indrag vid nytt stycke
+\setlength{\parindent}{0pt}
+% men däremot lite mellanrum
+\setlength{\parskip}{10pt}
+
+\maketitle
+
+\section{Vad är webbtillgänglighet?}
+Tillgänglighets aspekter kan skilja från person till person men vad exakt tillgänglighet är kan vara svårt att sätta fingret på men för denna studie används Steve Krug och hans egna definition av webbtillgänglighet i sin bok Don't Make Me Think revisited: A Common Sense Approach to Web Usability \textcite{Krug}.
+Hans definition är följande:
+
+
+``Du kommer hitta olika definitioner av användbarhet men ofta bryts det ned i olika punkter som;``
+
+\begin{itemize}
+    \item Användbar: Gör den något som personen behöver?
+    \item Lärbar: Kan personen lära sig hur man använder detta?
+    \item Minnesvärd: Behöver personen lära sig om denna sak varje gång den används?
+    \item Effektiv: Få den jobbet gjort på en rimlig tid med den insats som denna person gör?
+    \item Önskvärd: Vill personen ha detta?
+    \item Trevlig: Tycker personen att detta är trevligt eller till och med roligt att använda?
+\end{itemize}
+
+När något är användbart ska alltså en person som har erfarenheter och förmågor kunna lista ut hur man använder en produkt utan att det ska ta för mycket tid och energi än vad som egentligen behövs.
+
+\subsection{Alt-Taggar}
+En alt-tagg är en alternativ text till olika element på en hemsida och ska förklara och ge kontext till vad den är kopplad till.
+Ett bra exempel för detta är på bilder som kan berätta vad som är på bilden och ge kontext varför den är här på sidan \textcite{Nordström}.
+
+\subsection{WAI-ARIA}
+WAI-ARIA används för att göra webbinnehåll mer tillgängligt för personer som använder hjälpmedel som skärmläsare och har blivit en teknisk standard. \textcite{ARIA}
+
+
+\subsection{Kontraster}
+Ett av de vanligare felen som kan uppstå på hemsidor är dåliga kontraster.
+Olika kontrastfel uppstår då det är svårt att se innehållet på grund av färgerna på hemsidan.
+Detta kan vara en text som inte syns på grund av att bakgrundsfärgen har för dålig konstrast jämfört med själva texten.
+Detta gör att ett stort problem uppstår speciellt för de som har synnedsättning eller nedsatt färgseende \textcite{Digg_2021}.
+
+\section{Vad är World Wide Web Consortium? (W3C)}
+World Wide Web Consortium även förkortat till W3C skapades av Tim Burners-Lee och arbetar med att skapa en webb som är tillgänglig för alla.
+W3C skapar och utvecklar olika webbstandarder för att uppnå detta.
+W3Cs egna dokument om Web Content Accessibility Guidelines har blivit standarden inom webbutvecklings industrin \textcite{W3C}.
+
+\subsection{Vad är Web Content Accessibility Guidelines? (WCAG)}
+Web Content Accessibility Guidelines är ett dokument gjort av W3C som har riktlinjer på hur vi ska göra webben tillgänglig för så många som möjligt.
+W3C beskriver själv vilka områden som WCAG ska behandla:
+
+``Genom att följa dessa riktlinjer kommer innehållet att bli mer tillgängligt för en större andel av personer med funktionsnedsättning, inklusive hjälpmedel för blindhet och nedsatt syn, dövhet och hörselnedsättning, begränsad rörelse, talsvårigheter, ljuskänslighet och kombinationer av dessa, och vissa hjälpmedel för inlärningssvårigheter och kognitiva begränsningar; men kommer inte att tillgodose alla användarbehov för personer med dessa funktionshinder.`` \textcite{WCAG}
+
+WCAG har även olika krav som indelas i möjlighet att uppfatta, hanterbarhet, begriplighet och hur robust en sida är.
+Möjlighet att uppfatta innehåller att en person ska kunna uppfatta sidan och att innehållet ska kunna presenteras på olika sätt som t.ex text kan konverteras till större stil.
+Hanterbarhet innebär att sidan ska kunna navigeras utan mus, alltså med tangentbord eller andra hjälpmedel.
+Begripligheten för sidan ska vara att det finns inmatningsstöd som hjälper användaren undvika eller rätta till misstag.
+Till sist ska sidan vara robust, innehållet ska vara robust för ett brett spektrum av användarprogram inklusive hjälpmedel som skärmläsare.
+Alla dessa krav tillsammans gör att en sida kan vara så användarvänlig och tillgänglig för dem flesta personerna. \textcite{Digg_2023}
+
+\subsection{Vad är Webb Accessibility Initiative? (WAI)}
+WAI är ett initiativ från W3C som är till för att öka prioriteten för användbarhet för dem med funktionsnedsättningar.
+Initiativet utvecklas genom att arbeta med olika industrier, organisationer, regeringar och mer för att runt om i världen göra webben mer tillgänglig.
+WAI har några primära aktiviteter som:
+
+\begin{itemize}
+    \item Garantera att W3C standarder utvecklas med tankar för tillgänglighet
+    \item Utveckla tillgänglighets riktlinjer för webben och appar
+    \item Utveckla resurser för att förbättra webbtillgänglighets utvärderingar
+    \item Fortsätta lära ut om webbtillgänglighet
+    \item Samarbeta med undersökningar och andra utvecklingar som kan påverka webbtillgänglighet i framtiden
+    \item Påverka fler att tänka på webbtillgänglighetsstandarder
+\end{itemize}
+
+\textcite{WAI}
+
+
+
+\printbibliography
+
+\end{document}
